@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Pecode Software Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div id="menu_icon"></div>
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Our requirement</a></li>
+          <li><a href="">we offer</a></li>
+          <li><a href="">contacts</a></li>
+        </ul>
+      </nav>
+      <div id="header-info">
+        <div>
+          <h2>Sent Request</h2>
+          <form>
+            <input type="text" name="name" id="name" placeholder="input your name"><br>
+            <label for="email">Input Email</label><br>
+            <input type="email" name="email" id="email" placeholder="example_email@gmail.com">
+            <input type="submit" value="Sent">
+          </form>
+        </div>
+        <div>
+          <div id="logo">
+            <img src="icons/2.png" alt="Pecode Software">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="requirements">
+      <h2>Our Requirement</h2>
+      <div class="requirements-wrap wrap">
+        <div>
+          <img src="icons/11.png" alt="requirement 1">
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in justo dignissim, sodales erat ac, mollis quam.</p>
+        </div>
+        <div>
+          <img src="icons/22.png" alt="requirement 1">
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in justo dignissim, sodales erat ac, mollis quam.</p>
+        </div>
+        <div>
+          <img src="icons/11.png" alt="requirement 1">
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in justo dignissim, sodales erat ac, mollis quam.</p>
+        </div>
+      </div>
+    </section>
+    <section id="we-offer">
+      <h2>We offer</h2>
+      <div class="wrap">
+        <div>
+          <div class="offer-img"><img src="icons/3.png" alt="career growth"></div>
+          <p>Career growth</p>
+        </div>
+        <div id="main-img-up">
+          <div class="offer-img"><img src="icons/a1.png" alt="flexible working schedule"></div>
+          <p>Flexible working schedule</p>
+        </div>
+        <div>
+          <div class="offer-img"><img src="icons/44.png" alt="comfortable workplace"></div>
+          <p>Comfortable workplace</p>
+        </div>
+        <div>
+          <div class="offer-img"><img src="icons/55.png" alt="competitive salary"></div>
+          <p>Competitive salary<br> according to the<br> qualifications</p>
+        </div>
+        <div>
+          <div class="offer-img"><img src="icons/66.png" alt="corporate leisure activities"></div>
+          <p>Corporate leisure activities</p>
+        </div>
+        <div>
+          <div class="offer-img"><img src="icons/77.png" alt="english lessons"></div>
+          <p>English Lessons</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div id="footer-b-img">
+      <div class="wrap">
+        <h2>Contacts</h2>
+        <section>
+          <h2>Sent Request</h2>
+          <form>
+            <input type="text" name="name" placeholder="input your name">
+            <label for="email">Input Email</label>
+            <input type="email" name="email" placeholder="example_email@gmail.com">
+            <input type="submit" value="Sent">
+          </form>
+        </section>  
+        <section>
+          <h2>Get in touch</h2>
+          <address>
+            <p>Ukraine, Lviv</p>
+            <p>Telephone:  +380509214381</p>
+            <p>E-mail:  pecodesoftware@gmail.com</p>
+          </address>
+          <div id="social">
+            <a href="" class="css-sprite-linkedin" data-title="LinkedIn"></a>
+            <a href="" class="css-sprite-twitter" data-title="Twitter"></a>
+            <a href="" class="css-sprite-fb" data-title="Facebook"></a>
+          </div>
+        </section> 
+      </div>
+    </div>
+    <div id="map" style="width:100%;height:400px"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 49.795921, lng: 24.004669};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var iconBase = 'icons/';
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+          icon: iconBase + 'pin.png'
+        });
+      }
+    </script>
+    <p>Created by Pecode Software</p>
+  </footer>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq-_VmKK8ldqKwBnYkmYUvmMzXBr_K5UM&callback=initMap">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <script>
+    $(document).ready(function(){
+        //mobile menu toggling
+        $("#menu_icon").click(function(){
+            $("header nav ul").toggleClass("show_menu");
+            $("#menu_icon").toggleClass("close_menu");
+            return false;
+        });
+    });
+</script>
+</body>
+</html>
