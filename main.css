@@ -158,6 +158,12 @@ form label{
 		padding: 0 70px;
 
 	}
+	
+	#requirements h2{
+		text-align: right;
+		padding-right: 30%;
+	}
+	
 	.requirements-wrap div{
 		width: 240px;
 		height: 260px;
